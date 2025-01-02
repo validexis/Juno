@@ -32,7 +32,7 @@ peers=""
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.juno/config/config.toml
 seeds=""
 
-sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9,0ujuno\"/;" ~/.juno/config/app.toml
+sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.025ujuno\"/;" $HOME/.juno/config/app.toml
 sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.juno/config/config.toml
 sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.juno/config/config.toml
 
